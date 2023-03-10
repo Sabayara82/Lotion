@@ -1,11 +1,7 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
+body{
+  margin : 0;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -14,3 +10,158 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/*                                                    navigation bar start                                                    */
+.topnav {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  border-top: 5px solid purple;
+  border-bottom: 1px solid lightgray;
+  height : 80px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 35px;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: purple;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav h1.lotion {
+  background-color: white;
+  color: Black;
+  font-size: 35px;
+}
+
+.topnav h2.lotion {
+  font-size: 15px;
+  color: gray;
+}
+/* Centered section inside the top navigation */
+.topnav-centered h1 {
+  float: none;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.topnav-centered h2 {
+  float: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+/*                                                    container start                                                    */
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  
+}
+.container:before {
+  content: "";
+  border: 0.03px solid lightgray;
+  align-self: stretch;
+  height: 1000px;
+}
+
+.notes-section {
+  order : -1;
+  width : 25%;
+}
+
+.editing-section {
+  width : 75%;
+}
+/*                                                    Notes section start                                                    */
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: white;
+  color: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid lightgray;
+}
+
+.title {
+  flex: 1;
+  color : black;
+  font-size : 25px;
+}
+
+
+.addButton {
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 30px;
+
+}
+/* Change the color of links on hover */
+.addButton:hover {
+  background-color: purple;
+  color: white;
+  
+}
+
+.no-notes-yet {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  height: calc(100% - 80px);
+  font-size: 25px;
+  color: #666;
+}
+
+
+.select-note{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 80px);
+  font-size: 25px;
+  color: #666;
+}
+
+
+
+
+
